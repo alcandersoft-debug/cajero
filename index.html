@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cajero Automático</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="atm-container">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+        <aside class="sidebar">
+
+            <h1>
+                CAJERO<br>
+                AUTOMÁTICO
+            </h1>
+
+            <!-- Imagen / representación del cajero -->
+            <div class="atm-machine">
+
+                <div class="atm-screen"></div>
+
+                <div class="atm-keypad">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="atm-card-slot"></div>
+
+                <div class="atm-money-slot"></div>
+
+            </div>
+
+
+            <!-- Información del usuario -->
+            <div class="user-info">
+
+                <h2>Información</h2>
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        👤
+                    </div>
+
+                    <div>
+                        <span>Usuario:</span>
+                        <strong>Carlos Ramirez</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="separator"></div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        💳
+                    </div>
+
+                    <div>
+                        <span>Saldo actual:</span>
+
+                        <strong class="balance">
+                            $ 1.250.000
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cerrar sesión -->
+            <button class="logout-button">
+                <span>↪</span>
+                Cerrar sesión
+            </button>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTENIDO PRINCIPAL
+        ========================== -->
+
+        <main class="main-content">
+
+            <!-- Header -->
+
+            <header class="header">
+
+                <div>
+
+                    <h2>
+                        ¡Bienvenido!
+                    </h2>
+
+                    <p>
+                        Seleccione una opción para realizar su operación.
+                    </p>
+
+                </div>
+
+
+                <div class="date-time">
+
+                    <div>
+                        🕐
+                        <span>12:45 PM</span>
+                    </div>
+
+                    <div>
+                        📅
+                        <span>20/05/2024</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Menú -->
+
+            <section class="operations">
+
+
+                <!-- Consultar saldo -->
+
+                <button class="operation-card balance-card">
+
+                    <div class="operation-icon">
+                        💵
+                    </div>
+
+                    <div class="operation-text">
+
+                        <h3>
+                            1. Consultar saldo
+                        </h3>
+
+                        <p>
+                            Consulta el saldo disponible
+                            en tu cuenta.
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+                <!-- Retirar -->
+
+                <button class="operation-card withdraw-card">
+
+                    <div class="operation-icon">
+                        💰
+                    </div>
+
+                    <div class="operation-text">
+
+                        <h3>
+                            2. Retirar dinero
+                        </h3>
+
+                        <p>
+                            Retira dinero en efectivo
+                            de tu cuenta.
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+                <!-- Depositar -->
+
+                <button class="operation-card deposit-card">
+
+                    <div class="operation-icon">
+                        💳
+                    </div>
+
+                    <div class="operation-text">
+
+                        <h3>
+                            3. Depositar dinero
+                        </h3>
+
+                        <p>
+                            Realiza depósitos en
+                            tu cuenta.
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+                <!-- Movimientos -->
+
+                <button class="operation-card movements-card">
+
+                    <div class="operation-icon">
+                        📋
+                    </div>
+
+                    <div class="operation-text">
+
+                        <h3>
+                            4. Últimos movimientos
+                        </h3>
+
+                        <p>
+                            Consulta tus últimos
+                            movimientos.
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+            </section>
+
+
+            <!-- Seguridad -->
+
+            <section class="security">
+
+                <div class="security-icon">
+                    🛡️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Consejo de seguridad
+                    </h3>
+
+                    <p>
+                        No compartas tu clave con nadie y
+                        cubre el teclado al ingresar tu clave.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,727 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071c32,
+            #123e63
+        );
+
+    color: #142b47;
+
+}
+
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.atm-container {
+
+    width: 96%;
+
+    max-width: 1500px;
+
+    min-height: 94vh;
+
+    margin: 3vh auto;
+
+    display: flex;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #31597c;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+
+    width: 375px;
+
+    padding: 35px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b2948,
+            #0d355b
+        );
+
+    color: white;
+
+}
+
+
+/* Título */
+
+.sidebar h1 {
+
+    text-align: center;
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ================================
+   CAJERO VISUAL
+================================ */
+
+.atm-machine {
+
+    width: 215px;
+
+    height: 300px;
+
+    margin: 0 auto 35px;
+
+    padding: 25px;
+
+    position: relative;
+
+    background: #aebdca;
+
+    border-radius: 15px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.3);
+
+}
+
+
+/* Pantalla */
+
+.atm-screen {
+
+    width: 125px;
+
+    height: 85px;
+
+    margin: 0 auto 20px;
+
+    background: #122c47;
+
+    border-radius: 5px;
+
+    border: 10px solid #1c3d5d;
+
+}
+
+
+/* Teclado */
+
+.atm-keypad {
+
+    width: 100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 5px;
+
+}
+
+
+.atm-keypad span {
+
+    height: 14px;
+
+    border-radius: 3px;
+
+    background: #dbe1e5;
+
+}
+
+
+/* Ranura tarjeta */
+
+.atm-card-slot {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 95px;
+
+    width: 20px;
+
+    height: 45px;
+
+    background: #142b40;
+
+    border-radius: 3px;
+
+}
+
+
+/* Ranura dinero */
+
+.atm-money-slot {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    right: 25px;
+
+    height: 12px;
+
+    background: #12283e;
+
+    border-radius: 3px;
+
+}
+
+
+/* ================================
+   INFORMACIÓN USUARIO
+================================ */
+
+.user-info {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    background: rgba(255,255,255,.04);
+
+}
+
+
+.user-info h2 {
+
+    text-align: center;
+
+    padding: 16px;
+
+    font-size: 22px;
+
+    background: rgba(65, 130, 190, .35);
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+}
+
+
+.info-icon {
+
+    font-size: 30px;
+
+}
+
+
+.info-item span {
+
+    display: block;
+
+    color: #d4dfeb;
+
+    margin-bottom: 5px;
+
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    font-size: 18px;
+
+}
+
+
+.balance {
+
+    color: #6ee477;
+
+    font-size: 25px !important;
+
+}
+
+
+.separator {
+
+    height: 1px;
+
+    margin: 0 20px;
+
+    background: rgba(255,255,255,.2);
+
+}
+
+
+/* ================================
+   BOTÓN CERRAR SESIÓN
+================================ */
+
+.logout-button {
+
+    margin-top: auto;
+
+    width: 90%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    padding: 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ed2939;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.logout-button span {
+
+    font-size: 25px;
+
+    margin-right: 10px;
+
+}
+
+
+.logout-button:hover {
+
+    background: #c91f2d;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ================================
+   CONTENIDO PRINCIPAL
+================================ */
+
+.main-content {
+
+    flex: 1;
+
+    background: #365f82;
+
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+
+    min-height: 155px;
+
+    padding: 30px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0e2f50,
+            #123b60
+        );
+
+}
+
+
+.header h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.header p {
+
+    font-size: 20px;
+
+}
+
+
+/* Fecha */
+
+.date-time {
+
+    min-width: 205px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.1);
+
+}
+
+
+.date-time div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+}
+
+
+.date-time div:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ================================
+   OPERACIONES
+================================ */
+
+.operations {
+
+    padding: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* Tarjeta */
+
+.operation-card {
+
+    min-height: 250px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    text-align: left;
+
+    background: #f8f8f8;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.08);
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+
+}
+
+
+.operation-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.18);
+
+}
+
+
+/* Iconos */
+
+.operation-icon {
+
+    width: 120px;
+
+    height: 120px;
+
+    min-width: 120px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 55px;
+
+}
+
+
+/* Texto */
+
+.operation-text h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.operation-text p {
+
+    font-size: 19px;
+
+    line-height: 1.5;
+
+}
+
+
+/* Colores */
+
+.balance-card h3 {
+
+    color: #168538;
+
+}
+
+
+.balance-card .operation-icon {
+
+    background: #36a653;
+
+}
+
+
+.withdraw-card h3 {
+
+    color: #1663a7;
+
+}
+
+
+.withdraw-card .operation-icon {
+
+    background: #2877bd;
+
+}
+
+
+.deposit-card h3 {
+
+    color: #df7c00;
+
+}
+
+
+.deposit-card .operation-icon {
+
+    background: #f09016;
+
+}
+
+
+.movements-card h3 {
+
+    color: #5a45a7;
+
+}
+
+
+.movements-card .operation-icon {
+
+    background: #6754b5;
+
+}
+
+
+/* ================================
+   SEGURIDAD
+================================ */
+
+.security {
+
+    margin: 0 35px 35px;
+
+    padding: 25px 35px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: #dcebf8;
+
+}
+
+
+.security-icon {
+
+    font-size: 50px;
+
+}
+
+
+.security h3 {
+
+    font-size: 22px;
+
+    color: #084d99;
+
+    margin-bottom: 8px;
+
+}
+
+
+.security p {
+
+    font-size: 18px;
+
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+
+        width: 300px;
+
+    }
+
+    .operations {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .atm-container {
+
+        width: 100%;
+
+        margin: 0;
+
+        border-radius: 0;
+
+        flex-direction: column;
+
+    }
+
+    .sidebar {
+
+        width: 100%;
+
+    }
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+    .operations {
+
+        padding: 20px;
+
+    }
+
+    .operation-card {
+
+        min-height: 180px;
+
+    }
+
+}
